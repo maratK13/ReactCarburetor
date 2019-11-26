@@ -1,0 +1,33 @@
+{
+  "name": "react-carburetor",
+  "version": "0.1.0",
+  "description": "React state engine with anti-hook component.",
+  "main": "dist/index.js",
+  "types": "dist",
+  "directories": {
+    "lib": "lib/src/Carburetor"
+  },
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maratK13/ReactCarburetor.git"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
+    "tslint": "^5.18.0",
+    "typescript": "3.3.3"
+  },
+  "keywords": [],
+  "author": "Karamullin Marat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maratK13/ReactCarburetor/issues"
+  },
+  "homepage": "https://github.com/maratK13/ReactCarburetor#readme"
+}
