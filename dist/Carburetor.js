@@ -26,7 +26,7 @@ var Carburetor = /** @class */ (function () {
         };
         this.unsubscribe = function (id) {
             if (id in _this.subscribers) {
-                ComponentUpdateThrottle_1.componentUpdateCompressor.clearUpdater(id);
+                ComponentUpdateThrottle_1.componentUpdateThrottle.clearUpdater(id);
                 delete _this.subscribers[id];
             }
         };
@@ -36,7 +36,7 @@ var Carburetor = /** @class */ (function () {
             if (key in _this.subscribers) {
                 var subscriber = _this.subscribers[key];
                 if (subscriber) {
-                    ComponentUpdateThrottle_1.componentUpdateCompressor.addUpdater(key, subscriber);
+                    ComponentUpdateThrottle_1.componentUpdateThrottle.addUpdater(key, subscriber);
                 }
             }
         };

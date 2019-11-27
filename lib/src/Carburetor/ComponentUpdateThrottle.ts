@@ -2,7 +2,7 @@ import {IComponentUpdateThrottle} from "./Models";
 
 export class ComponentUpdateThrottle implements IComponentUpdateThrottle {
     protected updateTimeout: number = 40;
-    protected timeout: number = 0;
+    protected timeout: any | number = 0;
     protected updaters: Map<string, Function> = new Map<string, Function>();
 
     public addUpdater = (componentUID: string, callback: Function) => {
@@ -42,4 +42,4 @@ export class ComponentUpdateThrottle implements IComponentUpdateThrottle {
     };
 }
 
-export const componentUpdateCompressor = new ComponentUpdateThrottle();
+export const componentUpdateThrottle = new ComponentUpdateThrottle();

@@ -61,6 +61,8 @@ export class AntiHookComponent<P = {}, S = {}> extends React.Component<P, S> {
     };
 
     protected forceUpdateNoop = (): void => {
+        this.unUseEffects(this.props);
+        this.useEffects();
         this.forceUpdate(this.noop);
     };
 

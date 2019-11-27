@@ -44,6 +44,8 @@ var AntiHookComponent = /** @class */ (function (_super) {
             callBack();
         };
         _this.forceUpdateNoop = function () {
+            _this.unUseEffects(_this.props);
+            _this.useEffects();
             _this.forceUpdate(_this.noop);
         };
         _this.unsubscribeFromCarburetor = function (carburetorId) {

@@ -1,4 +1,4 @@
-import {componentUpdateCompressor} from "./ComponentUpdateThrottle";
+import {componentUpdateThrottle} from "./ComponentUpdateThrottle";
 import {ICarburetor, IDict} from "./Models";
 import {getUid} from "./Utils/getUid";
 
@@ -35,7 +35,7 @@ export class Carburetor<T extends {}> implements ICarburetor<T> {
 
     public unsubscribe = (id: string) => {
         if (id in this.subscribers) {
-            componentUpdateCompressor.clearUpdater(id);
+            componentUpdateThrottle.clearUpdater(id);
             delete this.subscribers[id];
         }
     };
@@ -49,7 +49,7 @@ export class Carburetor<T extends {}> implements ICarburetor<T> {
             const subscriber = this.subscribers[key];
 
             if (subscriber) {
-                componentUpdateCompressor.addUpdater(key, subscriber);
+                componentUpdateThrottle.addUpdater(key, subscriber);
             }
         }
     };

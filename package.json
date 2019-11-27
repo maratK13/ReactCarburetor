@@ -8,7 +8,8 @@
     "lib": "lib/src/Carburetor"
   },
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,21 @@
     "react": ">=16.0.0"
   },
   "devDependencies": {
+    "@types/enzyme": "3.10.3",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/jest": "24.0.23",
     "@types/react": "^16.0.0",
     "@types/react-dom": "^16.0.0",
+    "@types/react-test-renderer": "16.9.1",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.1",
+    "jest": "24.9.0",
+    "react-test-renderer": "16.12.0",
+    "ts-jest": "24.2.0",
     "tslint": "^5.18.0",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "keywords": [],
   "author": "Karamullin Marat",

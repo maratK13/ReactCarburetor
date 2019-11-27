@@ -37,4 +37,4 @@ var ComponentUpdateThrottle = /** @class */ (function () {
     return ComponentUpdateThrottle;
 }());
 exports.ComponentUpdateThrottle = ComponentUpdateThrottle;
-exports.componentUpdateCompressor = new ComponentUpdateThrottle();
+exports.componentUpdateThrottle = new ComponentUpdateThrottle();
